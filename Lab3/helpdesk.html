@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>CWA Help Desk Appointment</title>
+    </head>
+
+    <body>
+        <p><a href="http://www.swin.edu.au"><img src="swin_logo.png" alt="swinburne"></ing></a></p>
+        <h1>CWA Help Desk Appointment</h1>
+        <p>The Help Desk is located in ATC620. Open 10:30 to 19:00 Monday to Friday.</p>
+        <p>Check Blackboard for when CWA tutors will be there.</p>
+
+        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+            <fieldset>
+                <legend>Student details</legend>
+                <p>
+                    <lable for="ID">Student ID </lable>
+                    <input type="text" name="ID" id="ID" pattern="[0-9]{7,10}" maxlength="10">
+                </p>
+                
+                <p>
+                    <lable for="gname">Given Name </lable>
+                    <input type="text" name="gname" id="gname" pattern="[a-zA-Z ]{2,20}">
+
+                    <lable for="fname">Family Name </lable>
+                    <input type="text" name="fname" id="fname" pattern="[a-zA-Z ]{2,20}">
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Your unit</legend>
+                <p>
+                    <label for="course"></label>
+                    <input type="radio" name="unit" value="COS10026" required>COS10026
+
+                    <label for="course"></label>
+                    <input type="radio" name="unit" value="COS10004" required>COS10004
+
+                    <label for="course"></label>
+                    <input type="radio" name="unit" value="COS10009" required>COS10009
+                </p>
+
+                <p>
+                    <lable for="tutor">Your Tutor </lable>
+                    <select name="tutor" id="tutor" required>
+                        <option value="" disabled selected hidden>Please Select</option>
+                        <option value="4">MR Ishan</option>
+                        <option value="3">MR Jayson</option>
+                        <option value="2">MS Shaa</option>
+                        <option value="1">MS Niti</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Issue</legend>
+                <p>
+                    <lable for="html">HTML </lable>
+                    <input type="checkbox" name="thing[]" id="html" value="Html" checked>
+
+                    <lable for="css">CSS </lable>
+                    <input type="checkbox" name="thing[]" id="css" value="Css">
+
+                    <lable for="JS">JavaScript </lable>
+                    <input type="checkbox" name="thing[]" id="JS" value="Java">
+
+                    <lable for="php">PHP </lable>
+                    <input type="checkbox" name="thing[]" id="php" value="Php">
+
+                    <lable for="SQL">MySQL </lable>
+                    <input type="checkbox" name="thing[]" id="SQL" value="Sql">
+                </p>
+
+                <p>
+                    <lable>Comments
+                        <br>
+                        <textarea name="comments" rows="8" cols="30" placeholder="Write description of your problem here..."></textarea>
+                    </lable>
+                </p>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Preferred Date/Time</legend>
+                <p>
+                    <label for="date">Date </label>
+                    <input type="text" name="date" id="date" pattern="\d{2}/\d{2}/\d{4}" placeholder="dd/mm/yyyy" title="Format: dd/mm/yyyy">
+                </p>
+
+                <p>
+                    <label for="time">Time </label>
+                    <input type="text" name="time" id="time" pattern="(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]" placeholder="hh:mm" title="Format: 24-hour hh:mm (e.g. 14:30)">
+                </p>
+            </fieldset>
+            <input type="submit" value="Book">
+            <input type="reset" value="Reset form">
+       </body>
+</html>
